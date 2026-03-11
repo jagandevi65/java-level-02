@@ -1,0 +1,43 @@
+import java.io.*;
+
+class Taksha
+{
+    public static void main(String args[]) throws Exception
+    {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+
+        System.out.println("Takshashila University");
+        System.out.println("Ongur, Tindivanam");
+        System.out.println("-------------------");
+        System.out.println("Student Mark List");
+        System.out.println("-------------------");
+
+        System.out.println("Enter Enrollment No:");
+        String s1 = br.readLine();
+        int a = Integer.parseInt(s1);
+
+        System.out.println("Enter Student's Name:");
+        String s2 = br.readLine();
+
+        System.out.println("Enter Java Mark:");
+        String s3 = br.readLine();
+        int m1 = Integer.parseInt(s3);
+
+        System.out.println("Enter OS Mark:");
+        String s4 = br.readLine();
+        int m2 = Integer.parseInt(s4);
+
+        System.out.println("Enter CWS Mark:");
+        String s5 = br.readLine();
+        int m3 = Integer.parseInt(s5);
+
+        int tot = m1 + m2 + m3;
+        System.out.println("Total = " + tot);
+
+        int avg = tot / 3;
+        System.out.println("Average Mark = " + avg);
+
+        System.out.println("------------------");
+    }
+}
