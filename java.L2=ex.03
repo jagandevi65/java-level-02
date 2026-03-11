@@ -1,0 +1,42 @@
+import java.io.*;
+
+class Bill
+{
+    public static void main(String args[]) throws IOException
+    {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+
+        System.out.println("Jagan Computer Education");
+        System.out.println("No. 19, Lawspet, Puducherry");
+        System.out.println("-------------------------");
+        System.out.println("Bill Receipt");
+        System.out.println("-------------------------");
+
+        System.out.println("Enter the Product No:");
+        String s1 = br.readLine();
+        int a = Integer.parseInt(s1);
+
+        System.out.println("Enter the Particular:");
+        String s2 = br.readLine();
+
+        System.out.println("Enter the Rate:");
+        String s3 = br.readLine();
+        int b = Integer.parseInt(s3);
+
+        System.out.println("Enter the Quantity:");
+        String s4 = br.readLine();
+        int c = Integer.parseInt(s4);
+
+        int tot = b * c;
+        System.out.println("Product Amount: " + tot);
+
+        int gst = tot * 12 / 100;
+        System.out.println("GST (12%): " + gst);
+
+        int amt = tot + gst;
+        System.out.println("Total Amount: " + amt);
+
+        System.out.println("-------------------------");
+    }
+}
