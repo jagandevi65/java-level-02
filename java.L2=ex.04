@@ -1,0 +1,39 @@
+import java.io.*;
+
+class EB_Bill
+{
+    public static void main(String args[]) throws Exception
+    {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+
+        System.out.println("Government of Tamil Nadu");
+        System.out.println("Electricity Board");
+        System.out.println("------------------");
+        System.out.println("Bill Receipt");
+        System.out.println("------------------");
+
+        System.out.println("Enter the EB No:");
+        String s1 = br.readLine();
+        int a = Integer.parseInt(s1);
+
+        System.out.println("Enter the Customer Name:");
+        String s2 = br.readLine();
+
+        System.out.println("Enter the Previous Unit:");
+        String s3 = br.readLine();
+        int b = Integer.parseInt(s3);
+
+        System.out.println("Enter the Current Unit:");
+        String s4 = br.readLine();
+        int c = Integer.parseInt(s4);
+
+        System.out.println("Report");
+
+        int uc = c - b;
+        System.out.println("Unit Consumed in January: " + uc + " units");
+
+        int amt = 5 * uc;
+        System.out.println("Amount to be Paid: " + amt + " Rupees");
+    }
+}
